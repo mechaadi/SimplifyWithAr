@@ -7,8 +7,9 @@ Simplify with AR is an educational app which help teachers and students to visua
 
 ## What the buzz is about ?
 
+## Click on the image below to watch the video
 ## [![PROTOTYPE DEMONSTRATION(Youtube Video](https://img.youtube.com/vi/GbSBcDZPLXw/0.jpg)](https://www.youtube.com/watch?v=GbSBcDZPLXw)
-<iframe width="853" height="480" src="https://www.youtube.com/embed/GbSBcDZPLXw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 
 
 <p float="left">
