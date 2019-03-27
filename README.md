@@ -22,6 +22,10 @@ Simplify with AR is an educational app which help teachers and students to visua
   
 </p>
 
+# TRY THIS APP NOW
+https://www.mediafire.com/file/3o0bvv835lf9lxw/app-release.apk/file
+
+
 
 
 
