@@ -7,7 +7,9 @@ Simply with AR is an educational app which help teachers and students to visuali
 
 ## What the buzz is about ?
 
-<img src="https://drive.google.com/open?id=1B9QN235nvG3qrNMz4d2saTfLzChgKmOI">
+<img style="height:100px;" src="https://firebasestorage.googleapis.com/v0/b/ultrahacka7a.appspot.com/o/Screenshot_20190327-181314.png?alt=media&token=b0f232ba-3658-443e-b92b-8ad21bcb8672">
+
+
 
 
 
