@@ -26,6 +26,8 @@ Simplify with AR is an educational app which help teachers and students to visua
 https://www.mediafire.com/file/3o0bvv835lf9lxw/app-release.apk/file
 
 
+# Lets Explore It
+When we will open this app we will see a menu from where we can select various 3d objects that we have to augument in the real world(space). When you tap on any of the given object it redirects you to sceneform AR fragament. Now the user have to detect a surface it can be a table or a floor. They need to pan around their mobile phone so that they app can detect the surface and hence can detect the anchor point. It will show some white dots after surface detection. This is the time where users can tap on the screen to augument the selected object on the surface. 
 
 
 
