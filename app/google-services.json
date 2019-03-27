@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1023150296864",
+    "firebase_url": "https://ultrahacka7a.firebaseio.com",
+    "project_id": "ultrahacka7a",
+    "storage_bucket": "ultrahacka7a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1023150296864:android:f4ce8bab7bf28dfd",
+        "android_client_info": {
+          "package_name": "a7aent.com.simplifywithar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1023150296864-4vjqlnlhthngrlak1s3r5kmgkn6oquqs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCE2K5iPVtT6pn77njMpKcu2E77g6wshOs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
