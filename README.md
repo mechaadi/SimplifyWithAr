@@ -6,6 +6,9 @@ Simplify with AR is an educational app which help teachers and students to visua
 <img src="https://upload.wikimedia.org/wikipedia/en/thumb/d/dc/Virtuality_Continuum_2.jpg/400px-Virtuality_Continuum_2.jpg">
 
 ## What the buzz is about ?
+<iframe width="853" height="480" src="https://www.youtube.com/embed/GbSBcDZPLXw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
 <p float="left">
 <img src="https://firebasestorage.googleapis.com/v0/b/ultrahacka7a.appspot.com/o/009.jpeg?alt=media&token=c474ab5e-84cc-4c02-adc9-947536dc0822" height="400px">
   
@@ -34,8 +37,8 @@ Now that the object is augumented in real world now that the object is augumente
 Apart from augumenting these virtual object in real world, users can share their experience with friends and family with AR Core cloud anchors API which is provided by google platform.
 
 # TECHNOLOGY STACK
-1.Android  Studio - For ui and event listener)<br>
-2.AR Core - For cloud anchors and augumented reality<br>
-3.Sceneform - For rich renderables like transformable nodes<br>
-4.Firebase - To store cloud anchors and users data<br>
-5.Blender - To create 3d object textures<br>
+1. Android  Studio - For ui and event listener)<br>
+2. AR Core - For cloud anchors and augumented reality<br>
+3. Sceneform - For rich renderables like transformable nodes<br>
+4. Firebase - To store cloud anchors and users data<br>
+5. Blender - To create 3d objects,textures,materials<br>
