@@ -29,6 +29,13 @@ https://www.mediafire.com/file/3o0bvv835lf9lxw/app-release.apk/file
 # Lets Explore It
 When we will open this app we will see a menu from where we can select various 3d objects that we have to augument in the real world(space). When you tap on any of the given object it redirects you to sceneform AR fragament. Now the user have to detect a surface it can be a table or a floor. They need to pan around their mobile phone so that they app can detect the surface and hence can detect the anchor point. It will show some white dots after surface detection. This is the time where users can tap on the screen to augument the selected object on the surface. 
 
+Now that the object is augumented in real world now that the object is augumented in the real world user can interact with it. They can rotate it and even translate it with their fingers by pinching and draging on screen. 
 
+Apart from augumenting these virtual object in real world, users can share their experience with friends and family with AR Core cloud anchors API which is provided by google platform.
 
-
+# TECHNOLOGY STACK
+1.Android  Studio - For ui and event listener)
+2.AR Core - For cloud anchors and augumented reality
+3.Sceneform - For rich renderables like transformable nodes
+4.Firebase - To store cloud anchors and users data
+5.Blender - To create 3d object textures
