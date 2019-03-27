@@ -34,8 +34,8 @@ Now that the object is augumented in real world now that the object is augumente
 Apart from augumenting these virtual object in real world, users can share their experience with friends and family with AR Core cloud anchors API which is provided by google platform.
 
 # TECHNOLOGY STACK
-1.Android  Studio - For ui and event listener)
-2.AR Core - For cloud anchors and augumented reality
-3.Sceneform - For rich renderables like transformable nodes
-4.Firebase - To store cloud anchors and users data
-5.Blender - To create 3d object textures
+1.Android  Studio - For ui and event listener)<br>
+2.AR Core - For cloud anchors and augumented reality<br>
+3.Sceneform - For rich renderables like transformable nodes<br>
+4.Firebase - To store cloud anchors and users data<br>
+5.Blender - To create 3d object textures<br>
