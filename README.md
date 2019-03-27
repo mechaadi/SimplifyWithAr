@@ -6,6 +6,8 @@ Simplify with AR is an educational app which help teachers and students to visua
 <img src="https://upload.wikimedia.org/wikipedia/en/thumb/d/dc/Virtuality_Continuum_2.jpg/400px-Virtuality_Continuum_2.jpg">
 
 ## What the buzz is about ?
+
+## [![PROTOTYPE DEMONSTRATION(Youtube Video](https://img.youtube.com/vi/GbSBcDZPLXw/0.jpg)](https://www.youtube.com/watch?v=GbSBcDZPLXw)
 <iframe width="853" height="480" src="https://www.youtube.com/embed/GbSBcDZPLXw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
