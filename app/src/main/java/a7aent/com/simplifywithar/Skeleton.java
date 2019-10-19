@@ -26,12 +26,19 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.MotionEvent;
+import android.view.View;
+import android.webkit.WebView;
 import android.widget.Toast;
 import com.google.ar.core.Anchor;
 import com.google.ar.core.HitResult;
 import com.google.ar.core.Plane;
 import com.google.ar.sceneform.AnchorNode;
+import com.google.ar.sceneform.HitTestResult;
+import com.google.ar.sceneform.Node;
+import com.google.ar.sceneform.math.Quaternion;
+import com.google.ar.sceneform.math.Vector3;
 import com.google.ar.sceneform.rendering.ModelRenderable;
+import com.google.ar.sceneform.rendering.ViewRenderable;
 import com.google.ar.sceneform.ux.ArFragment;
 import com.google.ar.sceneform.ux.TransformableNode;
 
@@ -45,7 +52,11 @@ public class Skeleton extends AppCompatActivity {
     private static final double MIN_OPENGL_VERSION = 3.0;
 
     private ArFragment arFragment;
-    private ModelRenderable andyRenderable;
+    private ModelRenderable andyRenderable, head, rightdownarm, hip;
+    ViewRenderable viewRenderable, viewRenderable2;
+
+    private WebView mWebview, mWebview2 ;
+
 
     @RequiresApi(api = VERSION_CODES.N)
     @Override
@@ -77,6 +88,65 @@ public class Skeleton extends AppCompatActivity {
                             return null;
                         });
 
+
+        ModelRenderable.builder()
+                .setSource(this, R.raw.head)
+                .build()
+                .thenAccept(renderable -> head = renderable)
+                .exceptionally(
+                        throwable -> {
+                            Toast toast =
+                                    Toast.makeText(this, "Unable to load andy renderable", Toast.LENGTH_LONG);
+                            toast.setGravity(Gravity.CENTER, 0, 0);
+                            toast.show();
+                            return null;
+                        });
+
+
+        ModelRenderable.builder()
+                .setSource(this, R.raw.hip)
+                .build()
+                .thenAccept(renderable -> hip = renderable)
+                .exceptionally(
+                        throwable -> {
+                            Toast toast =
+                                    Toast.makeText(this, "Unable to load andy renderable", Toast.LENGTH_LONG);
+                            toast.setGravity(Gravity.CENTER, 0, 0);
+                            toast.show();
+                            return null;
+                        });
+
+
+        ViewRenderable.builder()
+                .setView(this, R.layout.skeleton_webview)
+                .build()
+                .thenAccept(renderable -> viewRenderable = renderable);
+
+
+
+        ViewRenderable.builder()
+                .setView(this, R.layout.skeleton_webview)
+                .build()
+                .thenAccept(renderable -> viewRenderable2 = renderable);
+
+
+
+
+
+
+        ModelRenderable.builder()
+                .setSource(this, R.raw.downarmright)
+                .build()
+                .thenAccept(renderable -> rightdownarm = renderable)
+                .exceptionally(
+                        throwable -> {
+                            Toast toast =
+                                    Toast.makeText(this, "Unable to load andy renderable", Toast.LENGTH_LONG);
+                            toast.setGravity(Gravity.CENTER, 0, 0);
+                            toast.show();
+                            return null;
+                        });
+
         arFragment.setOnTapArPlaneListener(
                 (HitResult hitResult, Plane plane, MotionEvent motionEvent) -> {
                     if (andyRenderable == null) {
@@ -89,10 +159,66 @@ public class Skeleton extends AppCompatActivity {
                     anchorNode.setParent(arFragment.getArSceneView().getScene());
 
                     // Create the transformable andy and add it to the anchor.
-                    TransformableNode andy = new TransformableNode(arFragment.getTransformationSystem());
-                    andy.setParent(anchorNode);
-                    andy.setRenderable(andyRenderable);
-                    andy.select();
+                    TransformableNode headNode = new TransformableNode(arFragment.getTransformationSystem());
+                    headNode.setParent(anchorNode);
+                    headNode.setRenderable(andyRenderable);
+                    headNode.select();
+
+//                    TransformableNode rightarmNode = new TransformableNode(arFragment.getTransformationSystem());
+//                    rightarmNode.setLocalScale(new Vector3(0.01f, 0.01f, 0.01f));
+//
+//                    rightarmNode.setParent(anchorNode);
+//                    rightarmNode.setRenderable(rightdownarm);
+//                    rightarmNode.select();
+
+                  //  rightarmNode.setLocalPosition(new Vector3(-0.9f, 0.0f, 0.0f));
+
+
+                    TransformableNode hipNode = new TransformableNode(arFragment.getTransformationSystem());
+                    hipNode.setLocalScale(new Vector3(0.5f, 0.5f, 0.5f));
+
+                    hipNode.setParent(headNode);
+                    hipNode.setRenderable(viewRenderable);
+                    hipNode.select();
+
+
+                    hipNode.setLocalPosition(new Vector3(0.9f, 0.0f, 0.0f));
+                    hipNode.setLocalRotation(Quaternion.axisAngle(new Vector3(0, 1f, 0), -30f));
+
+                    View v = viewRenderable.getView();
+
+                    mWebview = v.findViewById(R.id.skeletonweb);
+                    mWebview.getSettings().setJavaScriptEnabled(true);
+                    mWebview.loadUrl("https://www.britannica.com/science/human-skeleton");
+
+
+                    TransformableNode hipnode2 = new TransformableNode(arFragment.getTransformationSystem());
+                    hipnode2.setLocalScale(new Vector3(0.5f, 0.5f, 0.5f));
+
+                    hipnode2.setParent(headNode);
+                    hipnode2.setRenderable(viewRenderable2);
+                    hipnode2.select();
+
+
+                    hipnode2.setLocalPosition(new Vector3(-0.9f, 0.0f, 0.0f));
+                    hipnode2.setLocalRotation(Quaternion.axisAngle(new Vector3(0, 1f, 0), 30f));
+
+                    View v2 = viewRenderable2.getView();
+
+                    mWebview2 = v2.findViewById(R.id.skeletonweb);
+                    mWebview2.getSettings().setJavaScriptEnabled(true);
+                    mWebview2.loadUrl("https://www.livescience.com/22537-skeletal-system.html");
+
+
+                    hipNode.setOnTouchListener(new Node.OnTouchListener() {
+                        @Override
+                        public boolean onTouch(HitTestResult hitTestResult, MotionEvent motionEvent) {
+                            Toast.makeText(getApplicationContext(), "Hipnode", Toast.LENGTH_LONG).show();
+                            return false;
+                        }
+                    });
+
+
                 });
     }
 

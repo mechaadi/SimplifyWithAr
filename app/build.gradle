@@ -24,8 +24,14 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'com.google.ar:core:1.7.0'
-    implementation "com.google.ar.sceneform.ux:sceneform-ux:1.7.0"
+    // Provides ARCore Session and related resources.
+    implementation 'com.google.ar:core:1.12.0'
+
+    // Provides ArFragment, and other UX resources.
+    implementation 'com.google.ar.sceneform.ux:sceneform-ux:1.12.0'
+
+    // Alternatively, use ArSceneView without the UX dependency.
+    implementation 'com.google.ar.sceneform:core:1.12.0'
 
     implementation 'de.javagl:obj:0.2.1'
     implementation 'com.google.firebase:firebase-core:16.0.8'
@@ -90,3 +96,19 @@ sceneform.asset('sampledata/earth1.obj',
         'default',
         'sampledata/earth1.sfa',
         'src/main/res/raw/earth1')
+
+
+
+
+sceneform.asset('sampledata/downarmright.obj',
+        'default',
+        'sampledata/downarmright.sfa',
+        'src/main/res/raw/downarmright')
+
+
+
+sceneform.asset('sampledata/hip.obj',
+        'default',
+        'sampledata/hip.sfa',
+        'src/main/res/raw/hip')
+
